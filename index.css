@@ -11,10 +11,6 @@ body {
   background-color: #630;
   color: #292b31;
   font-family: Fredoka;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   margin: 0;
   font-size: 2vh;
   font-weight: 600;
@@ -59,11 +55,47 @@ body {
   color: #aaa;
 }
 
-#inventory {
+#switcher {
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  gap: 2vh;
+  justify-content: center;
+}
+
+#switcher > * {
+  width: 14vh;
+  height: 14vh;
+  background: #fff;
+  border: .5vh solid black;
+  box-sizing: border-box;
+  border-radius: 7vh;
+}
+
+#switcher > *::after {
+  content: "";
+  background-image: url("assets/images/unknown.svg");
+  background-size: 13vh 13vh;
+  display: block;
+  width: 13vh;
+  height: 13vh;
+  z-index: 2;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#main > * {
   width: 80vh;
   height: 50vh;
   background-color: #fff;
-  border: 4px solid #292b31;
+  border: 0.5vh solid #292b31;
   border-radius: 16px;
   position: relative;
 }
