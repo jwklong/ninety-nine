@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-  <path style="fill: rgb(180, 93, 0); stroke-width: 8px; stroke: rgb(100, 62, 0);" d="M 400 50 L 450 100 L 100 450 L 50 400 L 250 200 Q 200 200 200 50 H 250 Q 250 150 300 150 L 300 150 L 400 50" transform="matrix(1, 0, 0, 1, 0, 7.105427357601002e-15)"/>
+  <path style="fill: rgb(180, 93, 0); stroke-width: 12px; stroke: rgb(100, 62, 0);" d="M 400 50 L 450 100 L 100 450 L 50 400 L 250 200 Q 200 200 200 50 H 250 Q 250 150 300 150 L 300 150 L 400 50" transform="matrix(1, 0, 0, 1, 0, 7.105427357601002e-15)"/>
 </svg>
