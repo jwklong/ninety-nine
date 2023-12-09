@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <path style="" d="M 250 450 L 350 450 L 450 250 L 250 150 L 150 50 L 50 250 L 150 450 L 250 450" fill="#555" stroke="#333" stroke-width="20px" stroke-linejoin="round"/>
+  <path style="" d="M 250 300 L 350 250 L 250 200 L 150 100 L 100 250 Z" fill="#888" stroke="#666" stroke-width="10px" stroke-linejoin="round"/>
+</svg>
