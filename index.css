@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Fredoka;
+  src: url(assets/fonts/fredoka.ttf);
+}
+
+* {
+  user-select: none;
+}
+
+body {
+  background-color: #630;
+  color: #292b31;
+  font-family: Fredoka;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+.outlinetext {
+  color: #fff;
+  text-shadow:
+    0.04em 0.04em 0 #292b31,
+    -0.04em 0.04em 0 #292b31,
+    -0.04em -0.04em 0 #292b31,
+    0.04em -0.04em 0 #292b31,
+    0.06em 0 0 #292b31,
+    -0.06em 0 0 #292b31,
+    0 -0.06em 0 #292b31,
+    0 0.06em 0 #292b31;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 4px solid #292b31;
+  border-radius: 16px;
+  width: 24vh;
+  min-height: 4vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#tooltip > .title {
+  font-size: 3vh;
+}
+
+#tooltip > .body {
+  font-size: 1.5vh;
+  color: #aaa;
+}
+
+#inventory {
+  width: 80vh;
+  height: 50vh;
+  background-color: #fff;
+  border: 4px solid #292b31;
+  border-radius: 16px;
+  position: relative;
+}
+
+#inventorytag {
+  font-size: 6vh;
+  transform: translate(-3vh, -4.5vh) rotate(-10deg);
+  display: inline-block;
+}
+
+#items {
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  width: 10vh;
+  height: 10vh;
+  margin: 1vh;
+  background-image: url("assets/images/circle.svg");
+  position: relative;
+}
+
+.item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item > .amount {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 4vh;
+}
