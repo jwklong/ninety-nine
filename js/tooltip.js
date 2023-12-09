@@ -12,7 +12,7 @@ addEventListener("mousemove", (event) => {
         tooltip.style.top = event.y + 8 + "px"
         tooltip.style.display = "flex"
 
-        tooltip.querySelector(".title").innerHTML = tooltipConfig.title
+        tooltip.querySelector(".title").innerText = tooltipConfig.title
         tooltip.querySelector(".body").innerHTML = tooltipConfig.desc
 
         tooltipConfig.visible = false
