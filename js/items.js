@@ -8,6 +8,6 @@ Items.addItem(new Item('Stick', 'stick', 'assets/images/stick.svg', 'Wow.<br>A s
 Items.addItem(new Item('Orb', 'orb', 'assets/images/orb.svg', '<span style="color: #b4f">???</span>'))
 
 //test
-Items.getItemFromName('Rock').amount += 2
-Items.getItemFromName('Stick').amount += 3
-Items.getItemFromName('Orb').amount += 1
+Items.getItemFromName('Rock').addAmount(2)
+Items.getItemFromName('Stick').addAmount(3)
+Items.getItemFromName('Orb').addAmount(1)

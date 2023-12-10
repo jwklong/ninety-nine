@@ -38,15 +38,31 @@ export default class Item {
         this.image = image || this.image
         this.desc = desc || this.desc
 
-        game.items[id] = 0
+        game.items[id] = {
+            amount: 0,
+            exist: 0
+        }
     }
 
     get amount() {
-        return game.items[this.id]
+        return game.items[this.id].amount
     }
 
     set amount(x) {
-        game.items[this.id] = x
+        game.items[this.id].amount = x
+    }
+
+    get exist() {
+        return game.items[this.id].exist
+    }
+
+    /**
+     * Adds more of Item, and also increases exist
+     * @param {number} x 
+     */
+    addAmount(x) {
+        game.items[this.id].amount += x
+        game.items[this.id].exist += x
     }
 
     /**
@@ -69,7 +85,7 @@ export default class Item {
         root.addEventListener('mousemove', () => {
             tooltipConfig.visible = true
             tooltipConfig.title = this.name
-            tooltipConfig.desc = this.desc
+            tooltipConfig.desc = `${this.desc}<br><br><span style="color: #b4f">${this.exist} Exist</span>`
         })
 
         return root
