@@ -72,8 +72,8 @@ body {
   border: .5vh solid black;
   box-sizing: border-box;
   border-radius: 7vh;
+  transition: transform .2s;
 }
-
 #switcher > *::after {
   content: "";
   background-image: url("assets/images/unknown.svg");
@@ -82,6 +82,12 @@ body {
   width: 13vh;
   height: 13vh;
   z-index: 2;
+}
+#switcher > *:hover {
+  transform: scale(1.1)
+}
+#switcher > *:active {
+  transform: scale(0.95)
 }
 
 #main {
@@ -100,7 +106,7 @@ body {
   position: relative;
 }
 
-#inventorytag {
+#main > * > .tag {
   font-size: 6vh;
   transform: translate(-3vh, -4.5vh) rotate(-10deg);
   display: inline-block;
