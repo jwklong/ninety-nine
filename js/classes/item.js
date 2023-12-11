@@ -27,6 +27,14 @@ export default class Item {
     desc = "Unknown"
 
     /**
+     * What type of Item it is
+     * `0 = Normal,
+     * 1 = Golden`
+     * @type {number}
+     */
+    type = 0
+
+    /**
      * @param {string} name 
      * @param {string} id 
      * @param {string?} image 
@@ -72,10 +80,18 @@ export default class Item {
     generate() {
         var root = document.createElement('div')
         root.classList.add('item')
+        switch (this.type) {
+            case 1:
+                root.classList.add('golden')
+                break
+        }
 
+        var div = document.createElement('div')
+        div.setAttribute("style", `-webkit-mask-box-image: url(${this.image})`) //note - using .style doesn't work for this for some reason, should find out why somewhen
         var image = document.createElement('img')
         image.src = this.image
-        root.appendChild(image)
+        div.appendChild(image)
+        root.appendChild(div)
 
         var amt = document.createElement('span')
         amt.classList.add('amount', 'outlinetext')
@@ -86,6 +102,12 @@ export default class Item {
             tooltipConfig.visible = true
             tooltipConfig.title = this.name
             tooltipConfig.desc = `${this.desc}<br><br><span style="color: #b4f">${this.exist} Exist</span>`
+
+            switch (this.type) {
+                case 1:
+                    tooltipConfig.title = `<span style="color: #960">${tooltipConfig.title}</span>`
+                    break
+            }
         })
 
         return root
